@@ -31,6 +31,20 @@
       background-color: #007bff;
       color: white;
     }
+    /* --- Formulario de contacto añadido --- */
+    .form-dino {
+      background-color: #fffbe7;
+      border: 3px dashed #ff7f50;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #ffa500;
+    }
+    .btn-send {
+      background-color: #28a745;
+      border: none;
+    }
+    .btn-send:hover {
+      background-color: #1e7e34;
+    }
   </style>
 </head>
 <body>
@@ -44,7 +58,7 @@
   <div class="container text-center mt-3">
 
     <header class="p-3 rounded mb-3">
-      <h2>Dinosaurios</h2></h2>
+      <h2>Dinosaurios</h2>
       <p>Mundo jurasico</p>
     </header>
 
@@ -92,6 +106,41 @@
           <p>Cuello largo</p>
           <button class="btn btn-dino text-white">!</button>
         </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center my-5">
+      <div class="col-md-6 form-dino p-4">
+        <h3 class="text-center mb-3 text-success">Formulario de contacto</h3>
+        <p class="text-center text-muted">Envíanos un mensaje</p>
+
+        <form action="https://formspree.io/f/TU_ENDPOINT" method="POST" class="was-validated">
+          <div class="mb-3">
+            <label for="nom" class="form-label">Nombre y apellidos</label>
+            <input type="text" class="form-control" id="nom" name="nom" placeholder="Tu nombre" required>
+            <div class="invalid-feedback">Escribe tu nombre completo.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="tu@correo.com" required>
+            <div class="invalid-feedback">Introduce un correo válido.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="tel" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="tel" name="tel" placeholder="600123456" required>
+            <div class="invalid-feedback">Introduce un número de teléfono válido.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="missatge" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="missatge" name="missatge" rows="4" placeholder="Escribe tu mensaje jurásico..." required></textarea>
+            <div class="invalid-feedback">Por favor, escribe algo antes de enviar.</div>
+          </div>
+
+          <button type="submit" class="btn btn-send text-white w-100">Enviar</button>
+        </form>
       </div>
     </div>
 
